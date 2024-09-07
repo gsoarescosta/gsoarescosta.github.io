@@ -1,5 +1,5 @@
 $font-primary: 'Space Mono', Arial, serif;
-$font-secondary: 'Kaushan Script', cursive;
+$font-secondary: 'Orbitron';
 
 
 
@@ -8,7 +8,7 @@ $grid-gutter-width: 40px !default;
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
 
-$brand-primary: #FF9000 !default;
+$brand-primary: #004278 !default;
 
 $brand-white: #fff;
 $brand-black: #000;
@@ -17,7 +17,7 @@ $brand-gray: #ccc;
 $brand-lighter: #e9e9e9;
 $brand-body-color: #818892;
 $brand-selection-color: #f9f6f0;
-$brand-overlay-color: #4c4a8a;
+$brand-overlay-color: #00091e;
 $brand-bg-color: $brand-white;
 
 $brand-bg-dark: #2F3C4F;
@@ -187,7 +187,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background: rgba($brand-primary,.9);
+		background: rgba($brand-overlay-color,.95);
 	}
 	.display-t{
 		width: 100%;
@@ -208,64 +208,21 @@ h1, h2, h3, h4, h5, h6, figure {
 			font-size: 50px;
 			line-height: 1.3;
 			font-weight: 300;
-			-webkit-transform: rotate(-5deg);
-			-moz-transform: rotate(-5deg);
-			-ms-transform: rotate(-5deg);
-			-o-transform: rotate(-5deg);
-			transform: rotate(-5deg);
-			span{
-				padding: 4px 15px;
-				position: relative;
-				&:before{
-					position: absolute;
-					top: 40px;
-					left: 0;
-					width: 30px;
-					height: 4px;
-					content: '';
-					background: $brand-white;
-					margin-left: -30px;
-				}
-				&:after{
-					position: absolute;
-					top: 40px;
-					right: 0;
-					width: 30px;
-					height: 4px;
-					content: '';
-					background: $brand-white;
-					margin-right: -30px;
-				}
-			}
 			@media screen and (max-width: $screen-sm) {
 				font-size: 34px;
-				span{
-					&:before{
-						top: 28px;
-						width: 20px;
-						height: 3px;
-						margin-left: -15px;
-					}
-					&:after{
-						top: 28px;
-						width: 20px;
-						height: 3px;
-						margin-right: -15px;
-					}
-				}
 			}
 		}
 		h2 {
-			font-size: 20px;
-			line-height: 1.5;
+			font-family: $font-primary;
 			margin-bottom: 30px;
+			font-size: 50px;
+			line-height: 1.3;
+			font-weight: 300;
 		}
 		h3{
 			font-size: 16px;
 			@media screen and (max-width: $screen-sm) {
 				font-size: 14px;
-			}
-			span{
 			}
 		}
 		.profile-thumb{
@@ -365,10 +322,6 @@ h1, h2, h3, h4, h5, h6, figure {
 	border-bottom: none;
 }
 
-.fh5co-bg-color{
-	// background: #233142;
-
-}
 .fh5co-bg-dark{
 	background: $brand-bg-dark;
 	background: $brand-primary;
@@ -399,7 +352,6 @@ h1, h2, h3, h4, h5, h6, figure {
 		.first-block{
 			width: 40%;
 			display: inline-block;
-			float: left;
 			color: $brand-black;
 			font-weight: bold;
 		}
@@ -750,10 +702,10 @@ h1, h2, h3, h4, h5, h6, figure {
 	width: 100%;
 	display: table;
 	overflow: hidden;
-	@media screen and(max-width: $screen-sm){
+	@media screen and (max-width: $screen-sm){
 		height: 400px;
 	}
-	@media screen and(max-width: $screen-xs){
+	@media screen and (max-width: $screen-xs){
 		height: 270px;
 	}	
 	.desc{
@@ -779,7 +731,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			-webkit-transform: translate3d(0, 15px, 0);
 			transform: translate3d(0, 15px, 0);
 		}
-		@media screen and(max-width: $screen-sm){
+		@media screen and (max-width: $screen-sm){
 			opacity: 1;
 			background: rgba($brand-white,.6);
 			h3{
@@ -857,10 +809,10 @@ h1, h2, h3, h4, h5, h6, figure {
 		background-repeat: no-repeat;
 		position: relative;
 		height: 300px;
-		@media screen and(max-width: $screen-sm){
+		@media screen and (max-width: $screen-sm){
 			height: 400px;
 		}
-		@media screen and(max-width: $screen-xs){
+		@media screen and (max-width: $screen-xs){
 			height: 270px;
 		}
 	}
@@ -878,7 +830,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 		@include transition(.3s);
 
-		@media screen and(max-width: $screen-sm){
+		@media screen and (max-width: $screen-sm){
 			padding: 10px;
 		}
 
@@ -897,7 +849,7 @@ h1, h2, h3, h4, h5, h6, figure {
 				list-style: none;
 				display: inline-block;
 				margin-left: 10px;
-				@media screen and(max-width: $screen-sm){
+				@media screen and (max-width: $screen-sm){
 					font-size: 14px;
 				}
 				&:first-child{
@@ -952,14 +904,14 @@ h1, h2, h3, h4, h5, h6, figure {
 		position: relative;
 		@include flex();
 		@include flexwrap();
-		@media screen and(max-width: $screen-sm){
+		@media screen and (max-width: $screen-sm){
 			display: none;
 		}
 	}
 	.choose{
 		width: 50%;
 		padding: 4em;
-		@media screen and(max-width: $screen-sm){
+		@media screen and (max-width: $screen-sm){
 			width: 100%;
 			padding: 4em 1em;
 		}
